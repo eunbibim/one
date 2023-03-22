@@ -110,7 +110,11 @@ section{
   text-align: center;
 }
 section h2{
-  padding: 20px 0;
+  display: inline-block;
+  margin: 12px 0;
+  width: 200px;
+  padding: 5px;
+  border-bottom: 4px double #999999;
 }
 section h3{
   font-family: 'GangwonEdu_OTFBoldA';
@@ -126,6 +130,8 @@ section h3{
   border-radius: 20px;
   padding: 40px 0;
   position: relative;
+  overflow: hidden;
+  border: 1px solid #99999954;
 }
 
 .ticket ul{
@@ -200,11 +206,40 @@ section h3{
   transition: 0.3s;
 }
 
+.ticket button::before{
+  content: '';
+  background: url(../img/루피.PNG) no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  bottom: 10px;
+  left: -130px;
+  width: 120px;
+  height: 200px;
+  transition: 0.6s;
+  opacity: 0.9;
+}
+
+.ticket button::after{
+  content: '';
+  background: url(../img/루피2.PNG) no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  bottom: 10px;
+  right: -130px;
+  width: 140px;
+  height: 200px;
+  transition: 0.6s;
+  opacity: 0.9;
+}
+
 .ticket button:hover{
   color: rgb(255, 128, 0);
   font-weight: bold;
   background-color: rgba(0,0,0,0);
 }
+
+.ticket button:hover::before{left: 30px;}
+.ticket button:hover::after{right: 30px;}
 
 /* ______________________________ */
 
@@ -214,6 +249,7 @@ section h3{
   padding: 20px 40px;
   height: 340px;
   overflow: hidden;
+  border: 1px solid #99999954;
 }
 
 .service{
@@ -266,6 +302,7 @@ section h3{
   background-color: rgb(255, 247, 240);
   margin-top: 50px;
   padding: 20px 50px;
+  border: 1px solid #99999954;
 }
 .event ul{
   width: 100%;
@@ -345,6 +382,7 @@ section h3{
   padding: 20px 50px;
   height: 450px;
   position: relative;
+  border: 1px solid #99999954;
 }
 .goods{
   display: flex;
@@ -372,7 +410,7 @@ section h3{
   color: #666;
   position: absolute;
   top: 50px;
-  right: 65px;
+  right: 60px;
 }
 #goods span:hover{color: rgb(255, 128, 0);}
 
@@ -455,8 +493,9 @@ section h3{
   /* border: 1px solid #999; */
   border-radius: 20px;
   margin: 50px 0;
-  padding: 20px 40px;
+  padding: 20px 100px;
   height: 240px;
+  border: 1px solid #99999954;
 }
 
 .loss{
