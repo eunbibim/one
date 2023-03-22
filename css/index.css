@@ -1,0 +1,537 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GangwonEdu_OTFBoldA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html{scroll-behavior: smooth;}
+
+body{
+  font-family: 'NanumSquareNeo-Variable';
+  color: #333;
+}
+
+/* TOP______________________________________________________ */
+
+@keyframes ani{
+  0% {transform: translateY(0px)}
+  50% {transform: translateY(-30px)}
+  100% {transform: translateY(0px)}
+}
+
+.top{
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+.top span{
+  background-color: rgb(255, 128, 0);
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 50px;
+  transition: 0.3s;
+}
+.top span:hover{
+  background-color: #ffffff00;
+  color: rgb(255, 128, 0);
+  animation: ani 1.5s infinite;
+}
+
+/* HEADER___________________________________________________ */
+header{
+  background: url(../img/비행기.jpg) no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 850px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+nav{
+  width: 1200px;
+  height: 100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+nav .logo img{width: 150px;}
+nav ul{
+  display: flex;
+  font-size: 20px;
+}
+
+nav ul li{
+  border-left: 2px solid #e5e5e5;
+  padding: 0 15px;
+}
+nav ul li:last-child{
+  border-right: 2px solid #e5e5e5;
+}
+nav ul li a{
+  color: #fff;
+  position: relative;  
+}
+nav ul li a::before{
+  content: "";
+  background-color: rgb(255, 128, 0);
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+nav ul li a:hover{
+  font-style: italic;
+  font-weight: bold;
+}
+nav ul li a:hover::before{
+  width: 100%;
+}
+
+
+/* SECTION__________________________________________________ */
+
+section{
+  width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+section h2{
+  padding: 20px 0;
+}
+section h3{
+  font-family: 'GangwonEdu_OTFBoldA';
+  padding-bottom: 25px;
+  color: #555;
+}
+
+/* _______________________________ */
+.ticket{
+  background-color: rgba(254, 247, 238, 0.874);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  margin: 50px 30px 50px;
+  border-radius: 20px;
+  padding: 40px 0;
+  position: relative;
+}
+
+.ticket ul{
+  display: flex;
+  justify-content: center;
+}
+.ticket ul li{
+  margin: 0 20px 20px;
+}
+.ticket ul li a{
+  font-size: 18px;
+  transition: 0.1s;
+}
+.ticket ul li:first-child{
+  color: rgb(255, 128, 0);
+  border-bottom: 2px solid rgb(255, 128, 0);
+}
+.ticket ul li a:hover{
+  color: rgb(255, 128, 0);
+  border-bottom: 2px solid rgb(255, 128, 0);
+}
+.ticket div::before{
+  content: '\efd9';
+  font-family: 'Material Icons Outlined';
+  font-size: 40px;
+  position: absolute;
+  left: 200px;
+  color: rgb(255, 128, 0);
+}
+.ticket input[type="date"]{
+  outline: none;
+  border: 1px solid #999;
+  border-radius: 10px;
+  padding: 0 10px;
+  width: 160px;
+  height: 40px;
+  margin-right: 30px;
+  color: #777;
+}
+.ticket input[type="search"]{
+  border: 1px solid #999;
+  border-radius: 10px;
+  height: 40px;
+  outline: none;
+  padding-left: 8px;
+}
+.ticket input[type="search"]::placeholder{
+  transition: 0.3s;
+}
+.ticket input[type="search"]:focus::placeholder{
+  opacity: 0;
+}
+.ticket div span{
+  transform: translateY(8px);
+  margin: 0 20px;
+  cursor: pointer;
+}
+.ticket div span:hover
+{color: rgb(255, 128, 0);}
+
+
+.ticket button{
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: rgb(255, 128, 0);
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: 'NanumSquareNeo-Variable';
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.ticket button:hover{
+  color: rgb(255, 128, 0);
+  font-weight: bold;
+  background-color: rgba(0,0,0,0);
+}
+
+/* ______________________________ */
+
+#service{
+  background-color: aliceblue;
+  border-radius: 20px;
+  padding: 20px 40px;
+  height: 340px;
+  overflow: hidden;
+}
+
+.service{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.service span{font-size: 150px;}
+
+.service .text h4{margin: 15px 0 50px 0;}
+
+.service .text .intext{
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 250px;
+  height: 220px;
+  transform: translateY(0px);
+  border-radius: 15px;
+  transition: 0.6s;
+}
+
+.service .text p{
+  width: 200px;
+  font-size: 14px;
+  line-height: 30px;
+  padding: 45px 20px 20px;
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.service .text a{
+  display: inline-block;
+  background-color: rgb(255, 128, 0);
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.service .ser:hover .intext{transform: translateY(-250px);}
+
+.service .text a:hover{transform: scale(1.1);}
+
+
+/* ______________________________ */
+
+#event{
+  border-radius: 20px;
+  background-color: rgb(255, 247, 240);
+  margin-top: 50px;
+  padding: 20px 50px;
+}
+.event ul{
+  width: 100%;
+  height: 700px;
+  display: flex;
+  padding-bottom: 20px;
+}
+.event ul li{
+  flex: 1;
+  margin-right: 30px;
+  filter: grayscale(1);
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  opacity: 0.7;
+}
+.event ul li:last-child{margin-right: 0;}
+
+.event ul li:nth-child(1){
+  background: url(../img/괌.jpg) no-repeat center center;
+}
+.event ul li:nth-child(2){
+  background: url(../img/일본.jpg) no-repeat center center;
+}
+.event ul li:nth-child(3){
+  background: url(../img/홍콩.jpg) no-repeat center center;
+}
+.event ul li:nth-child(4){
+  background: url(../img/하노이.jpg) no-repeat center center;
+}
+
+.event ul li:hover{
+  flex: 3;
+  filter: none;
+  border-radius: 30px;
+  opacity: 1;
+}
+
+.event .text{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.event .text h4{
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: normal;
+  border-bottom: 2px solid rgb(255, 128, 0);
+  width: 200px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+.event .text p{
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.event ul li:hover .text{
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  opacity: 1;
+}
+
+/* _____________________________________ */
+
+#goods{
+  background-color: rgb(255, 244, 225);
+  border-radius: 20px;
+  margin-top: 50px;
+  padding: 20px 50px;
+  height: 450px;
+  position: relative;
+}
+.goods{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.goods h2{position: relative;}
+
+.goods .text h4{
+  margin: 20px 0 10px; 
+  font-weight: normal;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #999;
+}
+.goods .text p{
+  font-family: 'GangwonEdu_OTFBoldA';
+  margin-bottom: 30px;
+  color: #555;
+}
+
+#goods span{
+  font-size: 20px;
+  font-family: 'GangwonEdu_OTFBoldA';
+  cursor: pointer;
+  color: #666;
+  position: absolute;
+  top: 50px;
+  right: 65px;
+}
+#goods span:hover{color: rgb(255, 128, 0);}
+
+
+.goods .img .img1,
+.goods .img .img2,
+.goods .img .img3,
+.goods .img .img4{
+  width: 250px;
+  height: 250px;
+  border-radius: 50% 50% 5px 5px;
+  box-shadow:  0 0 10px rgba(255, 128, 0, 0.473);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.goods .img .img1::before, 
+.goods .img .img2::before, 
+.goods .img .img3::before, 
+.goods .img .img4::before{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateX(-125px);
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.goods .img .img1{
+  background: url(../img/기장루피.jpg) center center;
+  background-size: cover;
+}
+.goods .img .img1::before{
+  content: '';
+  background: url(../img/기장루피2.jpg) center center;
+  background-size: cover;
+}
+
+.goods .img .img2{
+  background: url(../img/승무원루피.jpg) center center;
+  background-size: cover;
+}
+.goods .img .img2::before{
+  content: '';
+  background: url(../img/승무원루피2.jpg) center center;
+  background-size: cover;
+}
+
+.goods .img .img3{
+  background: url(../img/키링.png) center center;
+  background-size: cover;
+}
+.goods .img .img3::before{
+  content: '';
+  background: url(../img/키링2.png) center center;
+  background-size: cover;
+}
+
+.goods .img .img4{
+  background: url(../img/자석세트.png) center center;
+  background-size: cover;
+}
+.goods .img .img4::before{
+  content: '';
+  background: url(../img/자석세트2.png) center center;
+  background-size: cover;
+}
+.goods .img .img1:hover,
+.goods .img .img2:hover,
+.goods .img .img3:hover,
+.goods .img .img4:hover
+{border-radius: 50%;}
+.goods .img :hover::before{opacity: 1;}
+
+/* ____________________________________ */
+
+#loss{
+  background-color: rgb(243, 253, 228);
+  /* border: 1px solid #999; */
+  border-radius: 20px;
+  margin: 50px 0;
+  padding: 20px 40px;
+  height: 240px;
+}
+
+.loss{
+  display: flex;
+  justify-content: space-around;
+}
+.loss div{margin-top: 20px;}
+.loss b{margin-right: 20px}
+.loss input[type=date],.loss select{
+  width: 200px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid #999;
+  color: #555;
+  outline: none;
+  font-size: 12px;
+}
+loss option{
+  padding: 5px 0;
+}
+
+.loss button{
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: rgb(255, 128, 0);
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+  font-family: 'NanumSquareNeo-Variable';
+  border-radius: 10px;
+  transition: 0.3s;
+  width: 90px;
+}
+  
+
+.loss button:hover{
+  color: rgb(255, 128, 0);
+  font-weight: bold;
+  background-color: rgba(0,0,0,0);
+}
+
+
+
+/* FOOTER___________________________________________________ */
+
+footer{
+  background-color: #e5e5e5;
+  width: 100%;
+  height: 110px;
+  padding: 32px 10px 0;
+}
+footer ul{
+  width: 1200px;
+  margin: auto;
+  font-size: 13px;
+  margin-bottom: 10px;
+  display: flex;
+}
+footer ul li{
+  padding: 0 8px;
+  border-right: 1px solid #777;
+}
+footer ul li:first-child{
+  font-weight: bold;
+  padding-right: 10px;
+  padding-left: 0;
+}
+footer address{
+  width: 1200px;
+  margin: auto;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 20px;
+  word-spacing: 2px;
+}
+
+
